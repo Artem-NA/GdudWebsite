@@ -1,0 +1,70 @@
+﻿body {
+    margin: 0;
+    padding:0;
+    background-color: black;
+}
+
+.logo-container {
+    width: 150px; /* Adjust the size of your circle */
+    height: 150px; /* Adjust the size of your circle */
+    border-radius: 50%; /* Makes the container circular */
+    overflow: hidden; /* Hides anything outside the circular container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Background color of the circle */
+    
+}
+
+.logo-container img {
+    max-width: 100%;
+    max-height: 100%;
+}
+nav img{     /*logo*/
+    width:150px;
+    height:150px;
+}
+nav{    /* navigation bar*/
+    display:flex;
+    padding:2% 6%;
+    justify-content:space-between;
+    align-items:center;
+    background-color: black;
+    
+}
+.nav-links {
+    flex: 1;
+    text-align: right;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.nav-links ul li{
+    list-style:none;
+    display:inline-block;
+    padding:8px 12px;
+    position:relative;
+    font-family:sans-serif;
+    color:white;
+}
+.nav-links ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:20px;
+    cursor:pointer;
+    
+}
+.nav-links ul li::after{
+     /*set line under the links*/
+    content:"";
+    width:0%;
+    height:3px;
+    background:black;
+    display:block;
+    margin:auto;
+    transition:0.4s;
+}
+.nav-links ul li:hover::after{
+        /*activate at hover the line under the links*/
+        width:100%;
+
+}

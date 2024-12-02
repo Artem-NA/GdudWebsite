@@ -1,0 +1,125 @@
+<%- include('layout/head.ejs') %>
+   
+<link href="/css/SSGallery.css" rel="stylesheet" >
+
+</head>
+<body>
+    <div>
+        <%- include('layout/nav.ejs') %>
+    </div>
+
+    <!-- Gallery 1 -->
+    <div   id="resc">
+        <h1> אימון חילוץ </h1>
+    </div>
+    
+    <div class="gallery">
+        <% images.g1.forEach(function(image) { %>
+            <div class="photo">
+                <img src="<%= image %>" alt="Photo" onclick="openModal(this.src)">
+            </div>
+        <% }); %>
+    </div>
+
+    <!-- Gallery 2 -->
+    <div   id="puri">
+        <h1> פורים</h1>
+    </div>
+    
+    <div class="gallery">
+        <% images.g2.forEach(function(image) { %>
+            <div class="photo">
+                <img src="<%= image %>" alt="Photo" onclick="openModal(this.src)">
+            </div>
+        <% }); %>
+    </div>
+
+    <!-- Gallery 3 -->
+    <div   id="rand">
+        <h1>תמונות רנדומליות</h1>
+    </div>
+    
+    <div class="gallery">
+        <% images.g3.forEach(function(image) { %>
+            <div class="photo">
+                <img src="<%= image %>" alt="Photo" onclick="openModal(this.src)">
+            </div>
+        <% }); %>
+    </div>
+
+
+
+
+    <!-- Gallery 4-->
+    <div   id="erev">
+        <h1>ערבי מחלקה</h1>
+    </div>
+    
+    <div class="gallery">
+        <% images.g4.forEach(function(image) { %>
+            <div class="photo">
+                <img src="<%= image %>" alt="Photo" onclick="openModal(this.src)">
+            </div>
+        <% }); %>
+    </div>
+
+      <!-- Gallery 5-->
+      <div   id="sama">
+        <h1>ישיבות סמלי רכב</h1>
+    </div>
+    <div id="lol"></div>
+    <div class="gallery">
+        <% images.g5.forEach(function(image) { %>
+            <div class="photo">
+                <img src="<%= image %>" alt="Photo" onclick="openModal(this.src)">
+            </div>
+        <% }); %>
+    </div>
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <a id="download" href="#" download><span class="download">&#x21E9;</span></a>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <%- include('layout/end.ejs') %>
+<script>
+function openModal(src) {
+    var modal = document.getElementById("myModal");
+    var modalImg = document.getElementById("img01");
+    var downloadLink = document.getElementById("download");
+
+    modal.style.display = "block";
+    modalImg.src = src;
+    downloadLink.href = src;
+}
+
+function closeModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+}
+
+
+
+// Close modal when clicking outside the image
+window.onclick = function(event) {
+    var modal = document.getElementById("myModal");
+    if (event.target == modal) {
+        closeModal();
+    }
+}
+
+// Add keyboard support
+document.addEventListener('keydown', function(event) {
+    if (event.key === "Escape") {
+        closeModal();
+    }
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/sea.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.loginBox {
+    width: 450px;
+    height: 780px;
+    background-color: #fff;
+    color: #000;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 150px 30px;
+    border-block: 5px solid;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    top: 1%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+
+h1 {
+    top: 12%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    font-family: sans-serif;
+    font-size: 40px;
+}
+
+.loginBox h2 {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.loginBox input {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+    .loginBox input[type="text"], input[type="password"],input[type="email"] {
+        border: none;
+        border-bottom: 1px solid #808080;
+        outline: none;
+        height: 40px;
+        font-size: 15px;
+    }
+
+#LoginB {
+    border: none;
+    outline: none;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 50px;   
+}
+
+    #LoginB:hover {
+        cursor: pointer;
+        background-color: black;
+        color: white;
+    }
+
+.loginBox a {
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 20px;
+    color: #808080;
+}
+
+    .loginBox a:hover {
+        color: black;
+    }
+
+#Label1 {
+    line-height: 50px;
+    font-size: 22px;
+}
+
+.form-input {
+    width: 350px;
+    padding: 20px;
+    box-shadow: black;
+    position:absolute;
+    top:68%;
+    left:150%;
+    transform:translate(-50%,-50%);
+
+}
+.upload {
+    display: block;
+    color: #808080;
+    font-size: 15px;
+    font-family: "Open Sans",sans-serif;
+    text-transform: Uppercase;
+    cursor: pointer;
+    padding: 5px;
+    position: absolute;
+    top: 77%;
+    left:62%;
+    transform: translate(-50%,-50%);
+  
+}
+
+    .form-input input {
+        display: none;
+    }
+  
+
+    .form-input img {
+        width: 100%;
+        display: none;
+        margin-bottom: 30px;
+    }
+
+#FileUpload1{
+    position:absolute;
+    top:23%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    cursor:pointer;
+}
+  

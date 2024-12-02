@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><%= pageTitle %></title>
+
+    <!-- For favicon png -->
+		<link rel="shortcut icon" type="image/icon" href="/img/panter2.png"/>
+    <link href="/css/SSLogin.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="loginBox">
+        <img src="/img/panter2.jpeg" class="logo" />
+        <form id="form1" action="/auth/log" method="POST">
+            <label for="username">שם משתמש:</label>
+            <input type="text" id="username" name="username" autocomplete="off" required><br><br>
+            <label for="password">סיסמה:</label>
+            <input type="password" id="password" name="password" autocomplete="off" required><br><br>
+            <button type="submit" id="LoginB">כניסה</button>
+            <a href="/">אין משתמש? חזור לדף בית</a>
+            
+        </form>
+    </div>
+</body>
+</html>

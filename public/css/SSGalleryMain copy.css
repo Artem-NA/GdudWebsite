@@ -1,0 +1,155 @@
+﻿/* Gallery Main Container */
+.gallery {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+/* Photo Grid Container */
+.photo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+/* Category Title Styling */
+.photo h1 {
+    font-size: 1.8rem;
+    color: #333;
+    margin: 1rem 0;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    grid-column: 1 / -1;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.photo h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #007bff;
+    border-radius: 2px;
+}
+
+/* Image Container Styling */
+.photo a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.photo a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Styling */
+.photo img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    display: block;
+}
+
+.photo a:hover img {
+    transform: scale(1.05);
+}
+
+/* Overlay Effect */
+.photo a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.photo a:hover::before {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery {
+        margin: 1rem auto;
+        padding: 0 15px;
+    }
+
+    .photo {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .photo h1 {
+        font-size: 1.5rem;
+        margin: 0.8rem 0;
+    }
+
+    .photo img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        padding: 0 10px;
+    }
+
+    .photo {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .photo h1 {
+        font-size: 1.3rem;
+    }
+
+    .photo img {
+        height: 200px;
+    }
+}
+
+/* RTL Support */
+.gallery {
+    direction: rtl;
+}
+
+/* Loading Animation */
+.photo img {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+

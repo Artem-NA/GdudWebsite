@@ -1,0 +1,197 @@
+<%- include('layout/head.ejs') %>
+<link rel="stylesheet" href="/css2/style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+
+</head>
+
+<body>
+    <!-- Navigation Section -->
+    <%- include('layout/nav.ejs') %>
+
+    <!-- Hero Section -->
+    <section id="home" class="welcome-hero">
+        <div class="container">
+            <div class="welcome-hero-txt text-center">
+                <h2>ברוכים הבאים לרכבי הטנ"א</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Access Section -->
+    <section id="service" class="service">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2>מדריכי תחזוקה מהירים</h2>
+            </div>
+            <div class="service-content">
+                <div class="row">
+                    <!-- Quick Guide 1 -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-service-item">
+                            <a href="https://www.youtube.com/watch?v=ODJpz-AT_P8" target="_blank" rel="noopener noreferrer">    
+                                <div class="single-service-icon">
+                                    <i class="fas fa-car fa-2x"></i>
+                                </div>
+                                <h3>החלפת גלגל</h3>
+                                <p>מדריך מקצועי להחלפת גלגל ברכב</p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Quick Guide 2 -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-service-item">
+                            <a href="/videos#video-3">
+                                <div class="single-service-icon">
+                                    <i class="fas fa-tools fa-2x"></i>
+                                </div>
+                                <h3>שימוש בטלת</h3>
+                                <p>הדרכה מלאה לשימוש נכון בטלת</p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Quick Guide 3 -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-service-item">
+                            <a href="/files">
+                                <div class="single-service-icon">
+                                    <i class="fas fa-file fa-2x"></i>
+                                </div>
+                                <h3>טפסים לטיפול חודשי</h3>
+                                <p>מדריך למילוי טפסים הקשורים לרכב</p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Quick Guide 4 -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-service-item">
+                            <a href="/videos#video-2">
+                                <div class="single-service-icon">
+                                    <i class="fas fa-car-battery fa-2x"></i>
+                                </div>
+                                <h3>כריות הרמה</h3>
+                                <p>הדרכה לשימוש בטוח בכריות הרמה</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vehicle News Section -->
+    <section id="new-cars" class="new-cars">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>חדשות הרכב</h2>
+                <p>עדכונים חשובים על רכבי הטנ"א</p>
+            </div>
+            <div class="new-cars-content">
+                <div class="owl-carousel owl-theme" id="new-cars-carousel">
+                    <!-- Vehicle 1: D-Max -->
+                    <div class="new-cars-item">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <div class="new-cars-img">
+                                    <img src="/img/pic1.png" alt="די מקס" class="img-fluid"/>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="new-cars-txt">
+                                    <h2>די מקס</h2>
+                                    <p>איסוזו D-Max הוא טנדר המיוצר מאז 2002 על ידי איסוזו מוטורס.</p>
+                                    <div class="vehicle-specs">
+                                        <span><i class="fas fa-gas-pump"></i> דיזל</span>
+                                        <span><i class="fas fa-cogs"></i> 4x4</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Vehicle 2: tigris-->
+                    <div class="new-cars-item">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <div class="new-cars-img">
+                                    <img src="/img/cars/tigris1.png" alt="tigris" class="img-fluid"/>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="new-cars-txt">
+                                    <h2>טיגריס</h2>
+                                    <p>רכב משוריין של הגדוד שיכול להכיל בו המון אנשים ואפשר להיכנס איתו לכפרים</p>
+                                    <div class="vehicle-specs">
+                                        <span><i class="fas fa-gas-pump"></i> בנזין</span>
+                                        <span><i class="fas fa-cogs"></i> 4x4</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Vehicle 3: Mercedes G-Class -->
+                    <div class="new-cars-item">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <div class="new-cars-img">
+                                    <img src="/img/cars/ford.png" alt="פורד" class="img-fluid"/>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="new-cars-txt">
+                                    <h2>פורד</h2>
+                                    <p>פורד - רכב שטח יוקרתי ועוצמתי ליחידות מיוחדות.</p>
+                                    <div class="vehicle-specs">
+                                        <span><i class="fas fa-gas-pump"></i> היברידי</span>
+                                        <span><i class="fas fa-cogs"></i> 4x4</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+
+    <!-- Maintenance Support Section -->
+    <section id="maintenance-support" class="bg-light py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2>תמיכה טכנית</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="support-card">
+                        <h3><i class="fas fa-wrench"></i>לוח שנה </h3>
+                        <p>לוח חודשי של בחינות רכבים בו תוכלו לראות מתי הרכב שלכם מגיע לבחינה</p>
+                        <button class="btn btn-secondary" onclick="window.location.href='/calender'">
+                            להרחבה לחצו
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="support-card">
+                        <h3><i class="fas fa-phone"></i> תמיכה טכנית</h3>
+                        <p>מוקד תמיכה 24/7 לתקלות ובעיות דחופות</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <%- include('layout/end.ejs') %>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="/assets/js/custom.js"></script>
+    <script src="/assets/js/custom2.js"></script>
+</body>
+</html>

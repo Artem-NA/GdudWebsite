@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<%- include('layout/head.ejs') %>
+<!-- style css -->
+<link rel="stylesheet" type="text/css" href="css3/style.css">
+    <link rel="stylesheet" href="/css/SSCalender.css">
+</head>
+<body>
+   <div>
+
+    <%- include('layout/nav.ejs') %>
+
+   </div>
+
+    
+    <div class="calendar-container">
+        <div class="header">
+            <button onclick="changeMonth(-1)">&#10094;</button>
+            <h2 id="monthYear"></h2>
+            <button onclick="changeMonth(1)">&#10095;</button>
+        </div>
+        <div class="days" id="days">
+            <!-- Day boxes will be generated here -->
+        </div>
+    </div>
+
+    <script>
+        // Array of month names
+        const monthNames = [
+            "January", "February", "March", "April", "May", "June", 
+            "July", "August", "September", "October", "November", "December"
+        ];
+
+        // Store current month and year
+        let currentMonth = new Date().getMonth();
+        let currentYear = new Date().getFullYear();
+
+        // Information for each month (index 0 corresponds to January, index 11 corresponds to December)
+        const monthlyInfo = {
+            0: [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" ],
+            1: [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28" ],
+            2: [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" ],
+            3: [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30" ],
+            4: [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" ],
+            5: [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30" ],
+            6: [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" ],
+            7: [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" ],
+            8: [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30" ],
+            9: [ "1", "2", "3", "4", "5", "6", "7", "יום הולדת לאחי", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" ],
+            10: [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "יום הולדת לגאיה", "22", "23", "24", "25", "26", "27", "28", "29", "30" ],
+            11: [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" ]
+        };
+
+        // Render the calendar based on the current month and year
+        function renderCalendar() {
+            const monthYearElement = document.getElementById("monthYear");
+            const daysElement = document.getElementById("days");
+            daysElement.innerHTML = ''; // Clear existing days
+
+            monthYearElement.textContent = `${monthNames[currentMonth]} ${currentYear}`;
+
+            // Get the first day of the month and the last day of the month
+            const firstDay = new Date(currentYear, currentMonth, 1);
+            const lastDay = new Date(currentYear, currentMonth + 1, 0);
+
+            // Loop through the days of the month
+            for (let day = 1; day <= lastDay.getDate(); day++) {
+                const dayBox = document.createElement('div');
+                dayBox.className = 'day';
+
+                const dateElement = document.createElement('div');
+                dateElement.className = 'date';
+                dateElement.textContent = day;
+
+                // Create a read-only textarea for each day
+                const infoArea = document.createElement('textarea');
+                infoArea.className = 'info';
+                infoArea.placeholder = "Add info...";
+                infoArea.value = monthlyInfo[currentMonth][day - 1] || ""; // Set value from monthlyInfo
+                infoArea.readOnly = true; // Make textarea read-only
+
+                // Append date and info area to day box
+                dayBox.appendChild(dateElement);
+                dayBox.appendChild(infoArea);
+                daysElement.appendChild(dayBox);
+            }
+        }
+
+        // Change the current month and re-render the calendar
+        function changeMonth(direction) {
+            currentMonth += direction;
+            // Adjust year if the month goes out of bounds
+            if (currentMonth < 0) {
+                currentMonth = 11;
+                currentYear--;
+            } else if (currentMonth > 11) {
+                currentMonth = 0;
+                currentYear++;
+            }
+            renderCalendar(); // Re-render the calendar for the new month
+        }
+
+        // Initial rendering of the calendar
+        renderCalendar();
+    </script>
+</body>
+</html>

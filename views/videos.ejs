@@ -1,0 +1,85 @@
+<%- include('layout/head.ejs') %>
+<link rel="stylesheet" type="text/css" href="css3/style.css">
+
+
+<style>
+  /* Make sure the videos are displayed in vertical format */
+  .video-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  video {
+    width: 360px; /* Adjust for vertical format (TikTok-style) */
+    height: 640px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+  <div class="container-fluid">
+    <%- include('layout/nav.ejs') %>
+  </div>
+
+
+<div class="container mt-5">
+  <h1 class="text-center">סרטונים</h1>
+
+  <!-- Video 1 -->
+  <div class="video-section my-5" id="video-1">
+    <h2>איך מנקנשים נשק</h2>
+    <video controls>
+      <source src="/vid/gun.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Video 2 -->
+  <div class="video-section my-5" id="video-2">
+    <h2>איך משתמשים בכריות הרמה</h2>
+    <video controls>
+      <source src="/vid/tlat.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Video 3 -->
+  <div class="video-section my-5" id="video-3">
+    <h2>איך משתמשים בטלת</h2>
+    <video controls>
+      <source src="/vid/tlatt.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Add more videos here -->
+  <!-- Repeat similar structure for each video -->
+</div>
+
+<%- include('layout/end.ejs') %>
+
+<script>
+// Scroll to the specific video based on the URL hash
+document.addEventListener('DOMContentLoaded', function() {
+  const hash = window.location.hash;
+  if (hash) {
+    const targetVideo = document.querySelector(hash);
+    if (targetVideo) {
+      window.scrollTo({
+        top: targetVideo.offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  }
+});
+</script>
+
+</body>
+</html>

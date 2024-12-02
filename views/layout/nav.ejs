@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/"><img class="logo-container" src="/img/panter2.png" alt="Brand Logo"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="/#contactus">צרו קשר</a></li>
+      <li class="nav-item"><a class="nav-link" href="/gallery/main">גלריה</a></li>
+      <li class="nav-item"><a class="nav-link" href="/cars">רכב</a></li>
+      <li class="nav-item"><a class="nav-link" href="/weapons">נשק </a></li>
+      <li class="nav-item"><a class="nav-link" href="/weapons#optics">אופטיקה</a></li>
+      <% if (username) { %>
+      <li class="nav-item"><a class="nav-link" href="/calender">ברוך הבא ,<%= username %></a></li>
+      <% } %>
+    </ul>
+    <div class="login_bt">
+      <ul>
+        <% if (!loggedIn) { %>
+        <li><a href="/auth/log"><span class="user_icon"><i class="fa fa-user" aria-hidden="true"></i>כניסה</a></li>
+        <% } else { %>
+        <li><a href="/auth/logout"><span class="user_icon"><i class="fa fa-user" aria-hidden="true"></i>יציאה</a></li>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+</nav>

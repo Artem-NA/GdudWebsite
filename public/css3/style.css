@@ -1,0 +1,329 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Heebo', sans-serif;
+  }
+  
+  body {
+    direction: rtl;
+    background-color: #ffffff;
+  }
+  
+  /* Header Section */
+  .header_section {
+    background-color: #f8f9fa;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  /* Banner Section */
+  .banner_section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+  }
+  
+  .banner_img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .banner_taital {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 20px;
+  }
+  
+  .tasty_text {
+    font-size: 24px;
+    color: #666666;
+    margin-bottom: 30px;
+  }
+  
+  .btn_main {
+    margin-top: 30px;
+  }
+  
+  .about_bt a {
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: #073e79;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .about_bt a:hover {
+    background-color: #053b74;
+  }
+  
+  /* Coffee Section */
+  .coffee_section {
+    padding: 80px 0;
+  }
+  
+  .coffee_taital {
+    font-size: 36px;
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+  }
+  
+  .coffee_img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .coffee_img img:hover {
+    transform: scale(1.05);
+  }
+  
+  .types_text {
+    font-size: 24px;
+    color: #333333;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .read_bt {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .read_bt a {
+    display: inline-block;
+    padding: 8px 25px;
+    background-color: #0606e3;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .read_bt a:hover {
+    background-color: #1919ca;
+  }
+  
+  /* Client Section */
+  .client_section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+  }
+  
+  .client_img img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .client_taital_main {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .client_right {
+    padding-right: 20px;
+  }
+  
+  .moark_text {
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 10px;
+  }
+  
+  .client_text {
+    color: #666666;
+    line-height: 1.6;
+  }
+  
+
+
+
+  .client_section_2 {
+    position: relative;
+    padding: 40px 0;
+  }
+  
+  .carousel-indicators {
+    bottom: -40px;
+  }
+  
+  .carousel-indicators li {
+    background-color: #999;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+  }
+  
+  .carousel-indicators .active {
+    background-color: #333;
+  }
+  
+  .client_taital_main {
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .carousel-control-prev {
+    left: 15px;
+  }
+  
+  .carousel-control-next {
+    right: 15px;
+  }
+  
+  .client_img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .client_right {
+    padding-right: 30px;
+  }
+
+
+
+
+  /* Blog Section */
+  .blog_section {
+    padding: 80px 0;
+  }
+  
+  .blog_box {
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+  
+  .blog_img img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .date_text {
+    color: #007bff;
+    margin: 15px;
+  }
+  
+  .prep_text {
+    font-size: 22px;
+    color: #333333;
+    margin: 15px;
+  }
+  
+  .lorem_text {
+    color: #666666;
+    margin: 15px;
+    line-height: 1.6;
+  }
+  
+  /* Contact Section */
+  .contact_section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+  }
+  
+  .contact_taital {
+    text-align: center;
+  }
+
+  .mail_section_1 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .mail_text {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .massage-bt {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: vertical;
+  }
+  
+  .send_bt button {
+    padding: 12px 35px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .send_bt button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Map */
+  .map-responsive {
+    margin-top: 40px;
+  }
+  
+  .map-responsive iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .banner_section,
+  .coffee_section,
+  .client_section,
+  .blog_section,
+  .contact_section {
+    animation: fadeIn 1s ease-out;
+  }

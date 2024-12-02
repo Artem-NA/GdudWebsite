@@ -1,0 +1,429 @@
+<%- include('layout/head.ejs') %>
+  <!-- Custom styles for this template -->
+  <link href="css4/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="hero_area">
+      <!-- Header Section -->
+      <%- include('layout/nav.ejs') %>
+
+        <!-- Hero Slider Section -->
+        <section class="slider_section position-relative">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner">
+              <!-- Weapons Slide -->
+              <div class="carousel-item active">
+                <div class="container">
+                  <div class="box">
+                    <div class="row">
+                      <div class="col-md-7">
+                        <div class="detail-box">
+                          <div>
+                            <h1>נשקי הפנתר</h1>
+                            <div class="">
+                              <a href="#weapons-section" class="hh1">לקריאה</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-5">
+                        <div class="img-box">
+                          <img src="img/gun1.png" alt="נשק" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Optics Slide -->
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="box">
+                    <div class="row">
+                      <div class="col-md-7">
+                        <div class="detail-box">
+                          <div>
+                            <h1>אופטיקת פנתר</h1>
+                            <div class="">
+                              <a href="#optics-section" class="hh1">לאופטיקה</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-5">
+                        <div class="img-box">
+                          <img src="img/pic3.png" alt="אופטיקה" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    </div>
+
+    <!-- Weapons Section -->
+    <section id="weapons-section" class="layout_padding">
+      <div class="container">
+        <div class="heading_container">
+          <h2>מערך הנשקים</h2>
+        </div>
+
+        <div class="row mb-5">
+          <div class="col-md-6">
+            <div class="detail-box">
+              <p>
+                נשק הוא כלי שנועד להגן או לתקוף בעת לחימה. הוא פועל באמצעות כוח פיזי, כימי או טכנולוגי כדי לפגוע באויב
+                או
+                להגן מפניו. בישראל, שחיה תחת איום מתמיד של התקפות, נשק מהווה אמצעי הכרחי להבטחת ביטחון האזרחים ולהגנה על
+                המדינה.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="img-box">
+              <img src="img/gun1.png" alt="נשק" class="responsive-img" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Weapon Categories -->
+        <div class="row justify-content-center">
+          <div class="col-md-3">
+            <div class="feature-box text-center">
+              <img src="/svg/gun-weapons-svgrepo-com.svg" alt="רשימת שיפצורים מאושרים" height="80" width="80">
+              <h5 class="mt-3">רשימת שיפצורים</h5>
+              <p>רשימת השיפוצרים המאושרים </p>
+              <a href="\files\allowedUpgrades.pdf" class="btn btn-primary mt-2">לצפייה</a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="feature-box text-center">
+              <img src="/svg/clean-svgrepo-com.svg" alt="תחזוקה" height="80" width="80">
+              <h5 class="mt-3">תחזוקת נשק</h5>
+              <p>מדריכי ניקוי ותחזוקה</p>
+              <a href="/videos" class="btn btn-primary mt-2">למדריך</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Available Weapons Catalog -->
+      <div class="optics-catalog mt-5">
+        <h3 class="text-center mb-4">הנשקים שלנו</h3>
+
+        <!-- Weapons in Gdud -->
+        <div class="optics-category mb-5">
+          <h4 class="category-title">נשקים נפוצים בגדוד</h4>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="optic-card">
+                <div class="optic-image">
+                  <img src="/img/wo/scope1.png" alt="pigyon" class="img-fluid">
+                </div>
+                <div class="optic-details">
+                  <h5>פיגיון</h5>
+                  <ul class="specs-list">
+                    <li>שנת יצור: 2019</li>
+                    <li>קוטר: 40 מ"מ</li>
+                    <li>משקל: 3400 גרם</li>
+                    <li>תחמושת: לבנה ,נותב או ירוקה</li>
+                  </ul>
+                  <p>נשק הבנוי במיוחד לכוונת פיגיון ונותנת יכולת ירי תחת תנאי לחץ ואחוזי פגיעה מרשימים</p>
+                  <button class="btn btn-outline-primary btn-sm">פרטים נוספים</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="optic-card">
+                <div class="optic-image">
+                  <img src="/img/wo/gun2.jpeg" alt="m203" class="img-fluid">
+                </div>
+                <div class="optic-details">
+                  <h5>M-203</h5>
+                  <ul class="specs-list">
+                    <li>שנת יצור: 1969</li>
+                    <li>קוטר: 40 מ"מ</li>
+                    <li>משקל: 1600 גרם</li>
+                    <li>תחמושת: גבס,גז מדמיע ,עשן, תאורה ונ"ט</li>
+                  </ul>
+                  <p>כוונת נקודה אדומה ישראלית, עמידה בתנאי שטח קשים</p>
+                  <button class="btn btn-outline-primary btn-sm">פרטים נוספים</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="optic-card">
+                <div class="optic-image">
+                  <img src="/img/wo/gun3.png" alt="mag" class="img-fluid">
+                </div>
+                <div class="optic-details">
+                  <h5>מאג</h5>
+                  <ul class="specs-list">
+                    <li>שנת יצור: 1962</li>
+                    <li>קוטר לוע: 7.62 מ"מ</li>
+                    <li>משקל: 10.85 גרם</li>
+                    <li>תחמושת: 230 כדור בסרט תחמושת</li>
+                  </ul>
+                  <p>כוונת לקלע אשר מגיעה במגוון תצורת תו המכוון כגון טבעת אדומה שמשתמשת בסיב אופטי או צלב סוהר</p>
+                  <button class="btn btn-outline-primary btn-sm">פרטים נוספים</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+    </section>
+
+    <!-- Previous sections remain the same until optics section -->
+
+    <!-- Optics Section -->
+
+
+    <div id="optics"></div>
+    <section id="optics-section" class="layout_padding bg-light">
+      <div class="container">
+        <div class="heading_container">
+          <h2>מערך האופטיקה</h2>
+        </div>
+
+        <!-- Scope Interface -->
+        <div class="scope-interface position-relative my-5">
+          <div class="scope-outer">
+            <div class="scope-inner">
+              <div class="overlay-container">
+                <div class="night-vision-overlay"></div>
+                <div class="crosshair">
+                  <div class="cross-vertical"></div>
+                  <div class="cross-horizontal"></div>
+                </div>
+              </div>
+
+              <!-- Glass Effect -->
+              <div class="scope-glass"></div>
+              <button class="scope-btn btn-top" onclick="window.location.href='#nightvision'">אמצעי לילה</button>
+              <button class="scope-btn btn-right" onclick="document.getElementById('imageUpload').click();">העלה
+                תמונה</button>
+              <input type="file" id="imageUpload" accept="image/*" style="display:none;"
+                onchange="changeBackground(event)">
+              <button class="scope-btn btn-bottom" onclick="window.location.href='#scopes'">רשימת כוונות</button>
+              <button class="scope-btn btn-left">ראיית לילה</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!----------------------------------------------------------------------------------------->
+
+      <!----------------------------------------------------------------------------------------->
+
+      <!-- Available Optics Catalog -->
+      <div class="optics-catalog mt-5" id="scopes">
+        <h3 class="text-center mb-4">הכוונות שלנו</h3>
+
+        <!-- Day Optics -->
+        <div class="optics-category mb-5">
+          <h4 class="category-title">כוונות יום</h4>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="optic-card">
+                <div class="optic-image">
+                  <img src="/img/wo/scope1.png" alt="ACOG Scope" class="img-fluid">
+                </div>
+                <div class="optic-details">
+                  <h5>פיגיון</h5>
+                  <ul class="specs-list">
+                    <li>95% דיוק בתנועה</li>
+                    <li>כמות פגיעות בסוללה מלאה : 3600</li>
+                    <li>משקל: 1300 גרם</li>
+                  </ul>
+                  <p>כוונת אלקטרואופטית חכמה שפותחה בישראל עם מחשב מובנה בתוכה המדייק ומשפר את ירי בתזוזה</p>
+                  <button class="btn btn-outline-primary btn-sm">פרטים נוספים</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="optic-card">
+                <div class="optic-image">
+                  <img src="/img/wo/scope2.png" alt="Meprolight" class="img-fluid">
+                </div>
+                <div class="optic-details">
+                  <h5>מפרולייט</h5>
+                  <ul class="specs-list">
+                    <li>הגדלה: x1</li>
+                    <li>נקודה אדומה</li>
+                    <li>משקל: 350 גרם</li>
+                  </ul>
+                  <p>כוונת נקודה אדומה ישראלית, עמידה בתנאי שטח קשים</p>
+                  <button class="btn btn-outline-primary btn-sm">פרטים נוספים</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="optic-card">
+                <div class="optic-image">
+                  <img src="/img/wo/scope3.jpg" alt="Trijicon MRO" class="img-fluid">
+                </div>
+                <div class="optic-details">
+                  <h5>טריג'יקון</h5>
+                  <ul class="specs-list">
+                    <li>הגדלה: x4</li>
+                    <li>11 מטר ב100 מטר</li>
+                    <li>משקל: 500 גרם</li>
+                  </ul>
+                  <p>כוונת לקלע אשר מגיעה במגוון תצורת תו המכוון כגון טבעת אדומה שמשתמשת בסיב אופטי או צלב סוהר</p>
+                  <button class="btn btn-outline-primary btn-sm">פרטים נוספים</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--end of first row-->
+
+        <div class="optics-category mb-5">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="optic-card">
+                <div class="optic-image">
+                  <img src="/img/wo/scope4.jpg" alt="ACOG Scope" class="img-fluid">
+                </div>
+                <div class="optic-details">
+                  <h5>זאבון כוונת השלכה M203</h5>
+                  <ul class="specs-list">
+                    <li>אורך כוונת:115 מ"מ</li>
+                    <li>קוטר עדשה: 30 מ"מ</li>
+                    <li>משקל: 200 גרם</li>
+                  </ul>
+                  <p>כווונת המיועדת למטול אשר עוזרת לפגוע במטרה, אור שמש ביום וחומר זרחני בלילה</p>
+                  <button class="btn btn-outline-primary btn-sm">פרטים נוספים</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="optic-card">
+                <div class="optic-image">
+                  <img src="/img/wo/scope2.png" alt="Meprolight" class="img-fluid">
+                </div>
+                <div class="optic-details">
+                  <h5>מפרולייט</h5>
+                  <ul class="specs-list">
+                    <li>הגדלה: x1</li>
+                    <li>נקודה אדומה</li>
+                    <li>משקל: 350 גרם</li>
+                  </ul>
+                  <p>כוונת נקודה אדומה ישראלית, עמידה בתנאי שטח קשים</p>
+                  <button class="btn btn-outline-primary btn-sm">פרטים נוספים</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="optic-card">
+                <div class="optic-image">
+                  <img src="/img/wo/scope3.jpg" alt="Trijicon MRO" class="img-fluid">
+                </div>
+                <div class="optic-details">
+                  <h5>טריג'יקון</h5>
+                  <ul class="specs-list">
+                    <li>הגדלה: x4</li>
+                    <li>11 מטר ב100 מטר</li>
+                    <li>משקל: 500 גרם</li>
+                  </ul>
+                  <p>כוונת לקלע אשר מגיעה במגוון תצורת תו המכוון כגון טבעת אדומה שמשתמשת בסיב אופטי או צלב סוהר</p>
+                  <button class="btn btn-outline-primary btn-sm">פרטים נוספים</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Night Vision Optics -->
+        <div class="optics-category" id="nightvision">
+          <h4 class="category-title">אמצעי ראיית לילה</h4>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="optic-card">
+                <div class="optic-image">
+                  <img src="/img/wo/nv1.jpeg" alt="PVS-14" class="img-fluid">
+                </div>
+                <div class="optic-details">
+                  <h5>ליאור</h5>
+                  <ul class="specs-list">
+                    <li>משך פעולה:20 שעות</li>
+                    <li>הגדלה: x4</li>
+                    <li>משקל: 1110 גרם</li>
+                  </ul>
+                  <p>מכשיר ראיית לילה חד-עיני מתקדם לפעילות לילית</p>
+                  <button class="btn btn-outline-primary btn-sm">פרטים נוספים</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add more night vision optics as needed -->
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+
+
+    <%- include('layout/end.ejs') %>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const scopeButton = document.querySelector(".scope-btn.btn-left");
+          const scopeInner = document.querySelector(".scope-inner");
+
+          scopeButton.addEventListener("click", function () {
+            scopeInner.classList.toggle("night-vision-active");
+          });
+        });
+
+        function changeBackground(event) {
+          const file = event.target.files[0];
+          const scopeInner = document.querySelector('.scope-inner');
+
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+              scopeInner.style.backgroundImage = `url(${e.target.result})`;
+            }
+            reader.readAsDataURL(file);
+          }
+        }
+
+
+
+
+
+
+
+        let heroArea = document.querySelector('.hero_area');
+        let images = ['/img/wo/p1.jpeg', '/img/wo/night.jpeg'];
+        let index = 0;
+
+        setInterval(() => {
+          heroArea.style.backgroundImage = `url(${images[index]})`;
+          index = (index + 1) % images.length;
+        }, 7000); // Change image every 5 seconds
+
+      </script>
+  </body>
+
+  </html>

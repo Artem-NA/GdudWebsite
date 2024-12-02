@@ -1,0 +1,359 @@
+<%- include('layout/head.ejs') %>
+  <!-- Single CSS import instead of multiple -->
+  <link rel="stylesheet" href="css3/style.css">
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <div class="header_section">
+      <div class="container-fluid">
+        <%- include('layout/nav.ejs') %>
+      </div>
+
+      <!-- Banner Section -->
+      <div class="banner_section layout_padding" dir="rtl">
+        <div class="container">
+          <div id="banner_slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <!-- First Slide -->
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="banner_img">
+                      <img src="/img/home/main_slide/panterhead2.png" alt="Panter Head">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="banner_taital_main">
+                      <h1 class="banner_taital">ברוכים הבאים!</h1>
+                      <h5 class="tasty_text">החכם יוצר החזק מאלתר טנ"א פנתר</h5>
+                      <div class="btn_main">
+                        <div class="about_bt"><a href="/canva">לפנתרון לחצו</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Second Slide -->
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="banner_img">
+                      <img src="/img/gun1.png" alt="Weapon">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="banner_taital_main">
+                      <h1 class="banner_taital">נשקים</h1>
+                      <h5 class="tasty_text">בואו גלו איך עובד הנשק</h5>
+                      <div class="btn_main">
+                        <div class="about_bt"><a href="/weapons">בואו לגלות</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Third Slide -->
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="banner_img">
+                      <img src="/img/pic1.png" alt="Vehicle">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="banner_taital_main">
+                      <h1 class="banner_taital">רכבים</h1>
+                      <h5 class="tasty_text">חלמתם פעם לדעת על רכבים צבאיים?</h5>
+                      <div class="btn_main">
+                        <div class="about_bt"><a href="/vehicles">בואו לגלות</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Fourth Slide -->
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="banner_img">
+                      <img src="/img/scope5.png" alt="Optics">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="banner_taital_main">
+                      <h1 class="banner_taital">אופטיקה</h1>
+                      <h5 class="tasty_text">אתם יודעים איך הכוונת עובדת?</h5>
+                      <div class="btn_main">
+                        <div class="about_bt"><a href="/optics">בואו לגלות</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <a class="carousel-control-prev" href="#banner_slider" role="button" data-slide="prev">
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#banner_slider" role="button" data-slide="next">
+              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="coffee_section layout_padding" dir="rtl">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h1 class="coffee_taital">מה אפשר למצוא אצלנו?</h1>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="coffee_section_2">
+        <div id="main_slider" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <!-- First Features Slide -->
+            <div class="carousel-item active">
+              <div class="container-fluid">
+                <div class="row">
+                  <% const firstSlideFeatures=[ { img: "naknash.png" , title: "איך לנקנש נשק" , link: "/videos" }, {
+                    img: "greenaxe.png" , title: "מה זה גרזן ירוק" , link: "#" }, { img: "drone.png" ,
+                    title: "איך לתפעל רחפן" , link: "https://www.youtube.com/watch?v=y9KlggvEXKU" }, { img: "car.png" ,
+                    title: "איזה רכבים יש לטנא" , link: "/cars#our_cars" } ] %>
+
+                    <% firstSlideFeatures.forEach(feature=> { %>
+                      <div class="col-lg-3 col-md-6">
+                        <div class="coffee_img">
+                          <img src="img/home/banners_slide/<%= feature.img %>" alt="<%= feature.title %>">
+                        </div>
+                        <h3 class="types_text">
+                          <%= feature.title %>
+                        </h3>
+                        <div class="read_bt"><a href="<%= feature.link %>">לחצו לגלות</a></div>
+                      </div>
+                      <% }) %>
+                </div>
+              </div>
+            </div>
+
+            <!-- Second Features Slide -->
+            <div class="carousel-item">
+              <div class="container-fluid">
+                <div class="row">
+                  <% const secondSlideFeatures=[ { img: "flattire.png" , title: "מה לעשות כשיש פנצ'ר" ,
+                    link: "https://www.youtube.com/watch?v=u5SyV_iupSQ" }, { img: "cam.png" ,
+                    title: "איך עובדת מצלמת צייד" , link: "#" }, { img: "ongun.png" , title: "שיפצורים חוקיים על הנשק" ,
+                    link: "#" }, { img: "smartshooter.png" , title: "איך הפיגיון מזהה מטרות" , link: "#" } ] %>
+
+                    <% secondSlideFeatures.forEach(feature=> { %>
+                      <div class="col-lg-3 col-md-6">
+                        <div class="coffee_img">
+                          <img src="img/home/banners_slide/<%= feature.img %>" alt="<%= feature.title %>">
+                        </div>
+                        <h3 class="types_text">
+                          <%= feature.title %>
+                        </h3>
+                        <div class="read_bt"><a href="<%= feature.link %>">לחצו לגלות</a></div>
+                      </div>
+                      <% }) %>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider Controls -->
+          <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonials Section -->
+<div class="client_section layout_padding" dir="rtl">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="about_taital">מה אומרים עלינו</h1>
+      </div>
+    </div>
+    <div class="client_section_2">
+      <div id="testimonialCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+        <div class="carousel-inner">
+          <% const testimonials = [
+            {
+              img: "pic1.jpeg",
+              role: "עמית גד -קצין משאן ראשון",
+              text: "טנא פנתר הוא דוגמה מצוינת למקום שבו שירות הלקוחות הוא בראש סדר העדיפויות. הצוות נותן שירות מהלב, ומקדיש תשומת לב אישית לכל אחד ואחת. כשאתה מגיע לטנא פנתר, אתה מרגיש מיד את האווירה החמה והמחבקת, שמספקת חוויה יוצאת דופן."
+            },
+            {
+              img: "pic2.jpeg",
+              role: "יוסי-קצין רכב",
+              text: "בכל ביקור בטנא פנתר, ניתן להרגיש שהצוות שם תמיד כדי לדאוג לצרכים שלך. הם משקיעים מאמצים רבים כדי לוודא שכל לקוח מקבל את תשומת הלב המגיעה לו. התחושה היא שאתה לא רק לקוח, אלא חלק מהמשפחה, מה שמוסיף ערך רב לחוויה הכללית."
+            },
+            {
+              img: "pic3.jpeg",
+              role: "קצין פלוגת להב",
+              text: "אני ממליץ בחום על טנא פנתר! האתר עצמו פשוט נפלא, קל לשימוש ומספק מידע מפורט על כל השירותים המוצעים. זהו מקום שבו אתה יודע שתמיד תמצא את מה שאתה מחפש, ובזכות הצוות המקצועי והמסור, תרגיש מרוצה בכל ביקור."
+            },
+            {
+              img: "pic4.jpeg",
+              role: "יובל יאמין מפלג טנא ראשון",
+              text: "חוויה מושלמת, אין מילים! האתר קל לשימוש, מהיר, ותוכנן בצורה אינטואיטיבית שמאפשרת למצוא כל מה שצריך תוך רגעים ספורים. השירותים המוצעים כתובים בצורה ברורה ומעניינת, והצוות נמצא שם לכל שאלה עם יחס אישי ואכפתי. פשוט תענוג להיכנס ולהיעזר בו."
+            },
+            {
+              img: "pic5.jpeg",
+              role: "עדן אזולאי סמפית ראשונה",
+              text: "שירות מעולה ואתר שמדבר בעד עצמו! חיפשתי מקום שמרכז את כל המידע במקום אחד, ומצאתי בדיוק את זה פה. כל כך פשוט להתמצא, הכל ברור, והשירותים המוצעים מתוארים בצורה כל כך מדויקת. מהניסיון שלי, האתר הזה הוא בדיוק מה שצריך לכל מי שמחפש איכות ונוחות."
+            },
+            {
+              img: "pic6.jpeg",
+              role: "שמעון אברהם -סמגד ראשון",
+              text: "אני חייב לשתף כמה האתר הזה יוצא מן הכלל! חוויית המשתמש מדויקת, העיצוב מזמין, והשירותים המוצעים עונים בדיוק לצרכים שלי. בכל פעם שאני מבקר באתר, אני מתרשם מחדש מרמת המידע המפורט ומהנוחות שבשימוש. צוות התמיכה המקצועי מספק מענה מהיר ואדיב, וזה הופך את הכל לעוד יותר מושלם."
+            }
+          ] %>
+          
+          <% testimonials.forEach((testimonial, index) => { %>
+            <div class="carousel-item <%= index === 0 ? 'active' : '' %>">
+              <div class="client_taital_main">
+                <div class="client_left">
+                  <div class="client_img">
+                    <img src="img/home/<%= testimonial.img %>" alt="<%= testimonial.role %>">
+                  </div>
+                </div>
+                <div class="client_right">
+                  <h3 class="moark_text"><%= testimonial.role %></h3>
+                  <p class="client_text"><%= testimonial.text %></p>
+                </div>
+              </div>
+            </div>
+          <% }) %>
+        </div>
+        
+        <!-- Navigation arrows -->
+        <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+          <i class="fa fa-arrow-left" aria-hidden="true"></i>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+          <i class="fa fa-arrow-right" aria-hidden="true"></i>
+          <span class="sr-only">Next</span>
+        </a>
+        
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <% testimonials.forEach((_, index) => { %>
+            <li data-target="#testimonialCarousel" data-slide-to="<%= index %>" class="<%= index === 0 ? 'active' : '' %>"></li>
+          <% }) %>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Blog Section -->
+    <div class="blog_section layout_padding" dir="rtl">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h1 class="about_taital">הבלוג שלנו</h1>
+
+          </div>
+        </div>
+
+        <div class="blog_section_2">
+          <div class="row">
+            <% const blogPosts=[ { img: "crew.jpeg" , date: "15/3" , title: "טנא פנתר ניצחו בתחרות חטיבה" ,
+              text: "כאן תוכלו לראות אותו מנצח עם שאר חבריו את המלחמה בלב בלבלבב בלב בלבל" }, { img: "crew2.jpeg" ,
+              date: "22/4" , title: "שקד" , text: "כאן תוכלו לראות אותו מנצח עם שאר חבריו את המלחמה בלב בלבלבב בלב בלבל"
+              } ] %>
+
+              <% blogPosts.forEach(post=> { %>
+                <div class="col-md-6">
+                  <div class="blog_box">
+                    <div class="blog_img"><img src="/img/<%= post.img %>" alt="<%= post.title %>"></div>
+                    <h4 class="date_text">
+                      <%= post.date %>
+                    </h4>
+                    <h4 class="prep_text">
+                      <%= post.title %>
+                    </h4>
+                    <p class="lorem_text">
+                      <%= post.text %>
+                    </p>
+                  </div>
+                  <div class="read_bt"><a href="#">לחצו</a></div>
+                </div>
+                <% }) %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact_section layout_padding" id="contactus" dir="rtl">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h1 class="contact_taital">צור קשר</h1>
+
+          </div>
+        </div>
+
+        <div class="contact_section_2">
+          <div class="row">
+            <div class="col-md-12">
+              <form action="/contact" method="POST" class="mail_section_1">
+                <input type="text" class="mail_text" placeholder="השם שלך" name="name" required>
+                <input type="email" class="mail_text" placeholder="המייל שלך" name="email" required>
+                <input type="tel" class="mail_text" placeholder="הטלפון שלך (לא חובה)" name="phone">
+                <textarea class="massage-bt" placeholder="הודעה" rows="5" name="message" required></textarea>
+                <div class="send_bt"><button type="submit">שליחה</button></div>
+              </form>
+            </div>
+
+            <div class="col-12">
+              <h1 class="contact_taital">המיקום שלנו</h1>
+              <div class="map_main">
+                <div class="map-responsive">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2090.375521235006!2d35.00101858071249!3d32.19740711285352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d3b7c66bbec9b%3A0x3601fa1bf4439241!2sMutsav%20Tsofim%201!5e1!3m2!1sen!2sil!4v1712587477451!5m2!1sen!2sil"
+                    width="250" height="500" style="border:0; width: 100%;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                  </iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <%- include('layout/end.ejs') %>
+
+      <!-- Your existing custom scripts -->
+
+      <script src="/assets/js2/custom.js"></script>
+      <script src="/assets/js/smoothScroll.js"></script>
+
+
+  </body>
+
+  </html>
