@@ -21,7 +21,7 @@ app.use('/gallery', galleryRoutes);
 app.use(contactRoutes); 
 app.use(otherRoutes);
 
-// 404 middleware
+// 404 middleware!!
 const notFoundHandler = (req, res, next) => {
     res.render('404', { pageTitle: '404' });
 };
